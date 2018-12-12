@@ -8,3 +8,6 @@ If a player chooses to "hold", their turn total is added to their score, and it 
 The first player to score 100 or more points wins
 The purpose of this code is to make a program that gives the players options to roll again or hold, generate random numbers, and also be able to add and display each player's scores
 */
+
+//In order to generate a random number, we need to use Math.random method.
+//This method will return a random number between 1 and 7 i.e. excluding 7
