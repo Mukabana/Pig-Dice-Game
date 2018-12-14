@@ -10,7 +10,16 @@ The purpose of this code is to make a program that gives the players options to 
 */
 
 $(document).ready(function() {
-  var score = 0;
-}
-//In order to generate a random number, we need to use Math.random method.
-//This method will return a random number between 1 and 7 i.e. excluding 7
+  function player(playerName, score, turnScore) {           //We need two players, so we define the players by using a constructor to create player properties
+    this.playerName = playerName;                          //We'll have two players; player1 and player2
+    this.score = score;                                   //this is a player's total score at any point in the game
+    this.turnScore = turnScore;                          //this is the total number of points accumulated from several rolls of dice
+
+    var player1 = new player;
+    var player2 = new player;
+  };
+
+  
+
+
+});
