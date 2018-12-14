@@ -10,10 +10,7 @@ The purpose of this code is to make a program that gives the players options to 
 */
 
 $(document).ready(function() {
-  var scores = [0,0];
-  var roundScore = 0;
-  var activePlayer = 0;
-  var gameActive = true;
+  var score = 0;
 }
 //In order to generate a random number, we need to use Math.random method.
 //This method will return a random number between 1 and 7 i.e. excluding 7

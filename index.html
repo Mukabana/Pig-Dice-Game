@@ -13,32 +13,27 @@
     <header>
       <div class="title">
         <h1>Pig Dice Game</h1>
-        <button id="rules">Rules</button>
-        <button id="btn-new">New Game</button>
       </div>
     </header><br>
 
 <!-- Main panel -->
-
 <div class="container">
-  <div class="player-0-panel active">
-    <h1 id = "player-0">Player 1</h1>
-    <div class="player-score-0" id="score-0"></div>
-  </div>
 
   <div class="game">
-    <div>
-      <p>Change winning score?</p>
-      <input type="text" placeholder="100" class="target-score">
-    </div><br>
-    <div class="player-round-tally" id="tally"></div>
-    <img src="" id="dice" alt="Dice" class="dice">
+
+    <button id="btn-hold">Roll Dice</button>
     <button id="btn-hold">Hold</button>
+    <button id="btn-new">New Game</button>
+  </div><br>
+  <div class="players">
+    <h3 id="player-1">Player 1</h3><br>
+    <input type="text" placeholder="player-score-1">
   </div>
-  <div class="player-1-panel1">
-    <h1 id="player-1">Player 2</h1>
-    <div class="player-score-1" id="score-1"></div>
+  <div class="players">
+    <h3 id="player-2">Player 2</h3><br>
+    <input type="text" placeholder="player-score-2">
   </div>
+</div>
 
 <!--SCRIPTS -->
 
