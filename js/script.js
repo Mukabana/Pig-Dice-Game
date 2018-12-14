@@ -20,7 +20,7 @@ $(document).ready(function() {
   };
 
   /*We add the method by which the two players will play. We use JavaScript prototypes. They'll need a 6-sided dice and we need to generate a random number from 1 to 6*/
-  Player.prototype.rollDice = function () {
+  Player.prototype.rollDice = function() {
     var rollScore = 0      //this is the score for one roll of dice. We initially set it at zero seeing as no dice has been rolled yet.
     var diceRoll = parseInt(Math.random()*6 + 1);  //this is so we can generate a random number from 1 to 6
 
@@ -31,17 +31,26 @@ $(document).ready(function() {
       rollScore = 0;
       this.turnScore = 0;
       return "Roll One";
-    }
+    };
   };
 
-  Player.prototype.stop =function () {
+  Player.prototype.stop =function() {
     this.score += this.turnScore
     this.turnScore = 0;
-  }
-  Player.prototype.newTurn = function () {
+  };
+  Player.prototype.newTurn = function() {
     this.turnScore = 0;
-  }
+  };
 
+  Player.prototype.scoreCheck = function() {
+    if(this.score>=100) {
+      return "You have won!!"
+    };
+  };
 
+  Player.prototype.newGame = function() {
+    this.turnScore = 0;
+    this.score = 0;
+  };
 
 });
