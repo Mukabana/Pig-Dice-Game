@@ -10,16 +10,38 @@ The purpose of this code is to make a program that gives the players options to 
 */
 
 $(document).ready(function() {
-  function player(playerName, score, turnScore) {           //We need two players, so we define the players by using a constructor to create player properties
-    this.playerName = playerName;                          //We'll have two players; player1 and player2
-    this.score = score;                                   //this is a player's total score at any point in the game
-    this.turnScore = turnScore;                          //this is the total number of points accumulated from several rolls of dice
+  function currentPlayer(playerName, score, turnScore) {          //We need two players, so we define the players by using a constructor to create player properties
+    this.playerName = playerName;                                //We'll have two players; player1 and player2
+    this.score = score;                                         //this is a player's total score at any point in the game
+    this.turnScore = turnScore;                                //this is the total number of points accumulated from several rolls of dice
 
-    var player1 = new player;
-    var player2 = new player;
+    var player1 = new currentPlayer;
+    var player2 = new currentPlayer;
   };
 
-  
+  /*We add the method by which the two players will play. We use JavaScript prototypes. They'll need a 6-sided dice and we need to generate a random number from 1 to 6*/
+  Player.prototype.rollDice = function () {
+    var rollScore = 0      //this is the score for one roll of dice. We initially set it at zero seeing as no dice has been rolled yet.
+    var diceRoll = parseInt(Math.random()*6 + 1);  //this is so we can generate a random number from 1 to 6
+
+    if(dice !==1) {
+      rollScore = diceRoll;
+      this.turnScore += rollScore
+    } else {
+      rollScore = 0;
+      this.turnScore = 0;
+      return "Roll One";
+    }
+  };
+
+  Player.prototype.stop =function () {
+    this.score += this.turnScore
+    this.turnScore = 0;
+  }
+  Player.prototype.newTurn = function () {
+    this.turnScore = 0;
+  }
+
 
 
 });
