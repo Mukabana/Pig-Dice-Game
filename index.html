@@ -1,44 +1,76 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Pig Dice game</title>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-  </head>
-  <body>
-    <header>
-      <div class="title">
-        <h1>Pig Dice Game</h1>
+<head>
+  <title>Pig Dice game</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <h1>Pig Dice Game</h1>
+    </div>
+  </header>
+
+  <div class="container game">
+    <p>Pig Dice is a game in which two players race to reach 100 points.</p>
+    <h3>How to play:</h3>
+    <ul>
+      <li>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player holds and scores the sum of the rolls.</li>
+      <li><strong>If the player rolls a 1,</strong> the player scores nothing and it becomes the opponent's turn.</li>
+      <li><strong>If the player rolls 2 - 6,</strong> the number is added to the player's turn total and the player's turn continues.</li>
+      <li><strong>If the player holds,</strong> the turn total is added to the player's score and it becomes the opponent's turn.</li>
+    </ul>
+    <div class="form-style-3">
+      <form id="player-name-form">
+        <fieldset>
+          <legend>Start New Game</legend>
+          <label for="field1"><span>Player 1</span><input type="text" id="player-1" class="input-field" name="field1" value="" /></label>
+          <label for="field2"><span>Player 2</span><input type="text" id="player-2" class="input-field" name="field2" value="" /></label>
+          <input type="submit" value="Submit" /></label>
+        </fieldset>
+      </form>
+    </div>
+    <div class="row1">
+
+      <div class="col-sm-4 player-1-div">
+        <h2 class="player-1-name">Player-1</h2>
+        <h4>TURN SCORE:<span class="player-1-score"></span></h4>
+        <h4>YOUR TOTAL SCORE:<span class="player-1-total-score"></span></h4>
+        <br><br>
+        <div class="player-1-dice">
+          <h4>YOUR ROLL:<span class="player-1-roll"></span></h4>
+        </div>
+        <button class="roll-1 btn" type="submit">Roll Dice</button>
+        <button class="hold-1 btn" type="submit">Hold</button>
       </div>
-    </header><br>
 
-<!-- Main panel -->
-<div class="container">
+      <div class="col-sm-4">
+        <img src="img/pig.jpg" alt="pig header" class="header-pic" />
+      </div>
 
-  <div class="game">
+      <div class="col-sm-4 player-2-div">
+        <h2 class="player-2-name">Player-2</h2>
+        <h4>TURN SCORE:<span class="player-2-score"></span></h4>
+        <h4>YOUR TOTAL SCORE:<span class="player-2-total-score"></span></h4>
+        <br><br>
+        <div class="player-2-dice">
+          <h4>YOUR ROLL:<span class="player-2-roll"></span></h4>
+        </div>
+        <button class="roll-2 btn" type="submit">Roll Dice</button>
+        <button class="hold-2 btn" type="submit">Hold</button>
+      </div>
 
-    <button id="roll">Roll Dice</button><br><br>
-    <p id="dice"></p>
-    <button id="btn-hold" onclick="hold()">Hold</button><br><br>
-    <button id="btn-new" onclick="new-game()">New Game</button>
-  </div><br>
-  <div class="players">
-    <h3 id="player-1">Player 1</h3><br>
-    <input type="text" placeholder="player-score-1">
+    </div>
+
+
   </div>
-  <div class="players">
-    <h3 id="player-2">Player 2</h3><br>
-    <input type="text" placeholder="player-score-2">
-  </div>
-</div>
-
-<!--SCRIPTS -->
-
-<script src="js/jquery-3.3.1.js"></script>
-<script src="script.js"></script>
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
