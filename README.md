@@ -4,7 +4,7 @@
 ## Description
 Pig Dice is a game in which two players race to reach 100 points. Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player holds and scores the sum of the rolls. If the player rolls a 1, the player scores nothing and it becomes the opponent's turn.If the player rolls 2 - 6,the number is added to the player's turn total and the player's turn continues. If the player holds, the turn total is added to the player's score and it becomes the opponent's turn.
 ## Setup/Installation Requirements
-Generate a random number 1-6. Add roll to scoreTurn. If a 1 is rolled, scoreTurn is 0. When turn is over add scoreTurn to scoreGame, and scoreTurn should reset to 0. If a player's scoreGame reaches 100 the game is over and that player wins.
+Generate a random number 1-6. Add roll to scoreTurn. If a 1 is rolled, scoreTurn is 0. When turn is over add scoreTurn to the total score, and scoreTurn should reset to 0. If a player's total score reaches 100 the game is over and that player wins.
 
 ## BDD SPECIFICATIONS
 |BEHAVIOUR                            |INPUT                   |OUTPUT                                          |
